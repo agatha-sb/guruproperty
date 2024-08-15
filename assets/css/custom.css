@@ -232,7 +232,7 @@ section[class^="asb19__"] {
 .asb19__heading h3 {
   font-size: 70px;
   font-weight: 500;
-  color: #1e1e1e;
+  /* color: #1e1e1e; */
   line-height: 78px;
   letter-spacing: -2px;
   text-transform: capitalize;
@@ -445,6 +445,15 @@ section[class^="asb19__"] {
 }
 .asb19__quick-nav--single > :not(:last-child) {
   margin-bottom: 8px;
+}
+
+.asb19__quick-nav--single {
+  background-image: url('../images/pattern.png');
+  padding: 30px 35px;
+}
+.asb19__quick-nav--title h5 {
+  font-size: 25px;
+  line-height: 40px;
 }
 /** ----------------------------
 *   Section: Quick Nav End
@@ -667,6 +676,14 @@ section[class^="asb19__"] {
 *      Section: Agents End
 **  --------------------------*/
 
+.asb19__cta {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.asb19__cta.overlay::before {background-color: rgba(18, 16, 68, 0.61);}
+
 .asb19__client ul {
   display: flex;
   justify-content: space-between;
@@ -682,7 +699,9 @@ section[class^="asb19__"] {
 }
 
 
-
+.asb19__git {
+  background-color: #f5f5ff;
+}
 .asb19__git--wrap {
   padding-top: 80px;
 }
@@ -700,6 +719,82 @@ section[class^="asb19__"] {
 /** ----------------------------
 *      Section: Footer Start
 **  --------------------------*/
+.asb19__footer {
+  position: relative;
+  z-index: 3;
+}
+
+.asb19__footer::before {
+  position: absolute;
+  content: "";
+  background-image: url('../images/footer-pattern.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.asb19__footer--socials {
+  display: flex;
+  gap: 12px;
+}
+.asb19__footer--socials li a {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-accent);
+  font-size: 20px;
+}
+.asb19__footer--top {
+  padding: 25px 0;
+}
+.asb19__footer--top .asb19__footer--nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.asb19__footer--top .asb19__footer--nav li  {
+  margin-top: 0;
+}
+.asb19__footer--nav li a {
+  color: #2b2b2b;
+  font-size: 18px;
+  line-height: 32px;
+}
+.asb19__footer--middle {
+  /* margin-top: 20px; */
+  border-top: 1px solid var(--clr-accent-tint);
+  padding: 25px 0 50px;
+}
+.asb19__footer--title h5 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.asb19__footer--title {
+  margin-bottom: 15px;
+}
+.asb19__footer--nav li + li {
+  margin-top: 8px;
+}
+.asb19__footer--bottom {
+  background-color: var(--clr-accent);
+  padding: 15px 0;
+}
+.asb19__footer--logo img {
+  height: 45px;
+}
+.asb19__footer--copy {
+  color: var(--clr-white);
+}
+.asb19__footer--copy p {
+  font-size: 15px;
+  text-align: end;
+}
 /** ----------------------------
 *      Section: Footer End
 **  --------------------------*/
