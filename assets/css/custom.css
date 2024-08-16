@@ -98,7 +98,7 @@ svg {
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(27, 27, 27, 0.72);
+  background-color: rgba(27, 27, 27, 0.82);
   z-index: 0;
   top: 0;
   left: 0;
@@ -183,6 +183,15 @@ section[class^="asb19__"] {
   transition: all 0.3s ease-in-out;
   background-color: var(--clr-white);
   color: var(--clr-black);
+}
+
+.asb19__btn--fill {
+  background-color: var(--clr-yellow);
+  border-color: var(--clr-yellow);
+}
+.asb19__btn--fill:hover {
+  background-color: var(--clr-white);
+  border-color: var(--clr-white);
 }
 
 .asb19__btn--link {
@@ -412,6 +421,7 @@ section[class^="asb19__"] {
 .asb19__about--awards {
   display: flex;
   align-items: center;
+  margin-top: 50px;
 }
 .asb19__about--awards h6 {
   font-size: 22px;
@@ -428,6 +438,9 @@ section[class^="asb19__"] {
   height: 120px;
   object-fit: contain;
   object-position: left;
+}
+.asb19__about {
+  background-color: #f5f5ff;
 }
 /** ----------------------------
 *      Section: About End
@@ -470,26 +483,34 @@ section[class^="asb19__"] {
 .asb19__counter--single {
   display: flex;
   align-items: center;
+  padding: 0 12px 20px 50px;
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 .asb19__counter--num {
-  color: var(--clr-yellow);
+  color: var(--clr-white);
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 120px;
 }
 .asb19__counter--num span {
   display: inline-flex;
   line-height: 50px;
 }
-.asb19__counter--content {
+.asb19__counter--wrap .asb19__main--widget {
+  padding-bottom: 180px;
+}
+/* .asb19__counter--content {
   margin-left: 15px;
   flex: 0 0 auto;
   width: 60%;
-}
+} */
 .asb19__counter--title h6 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
+  text-transform: capitalize;
+  line-height: 30px;
+  min-height: 90px;
 }
 /** ----------------------------
 *      Section: Counter End
@@ -497,6 +518,9 @@ section[class^="asb19__"] {
 /** ----------------------------
 *      Section: Suburb Start
 **  --------------------------*/
+.asb19__suburb {
+  background-color: #f5f5ff;
+}
 .asb19__suburb--wrap {
   margin-top: 34px;
 }
@@ -563,17 +587,54 @@ section[class^="asb19__"] {
 /** ----------------------------
 *      Section: Property Start
 **  --------------------------*/
+.asb19__property::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 28%;
+  background-image: url('../images/home-1-background-patern-3.png');
+  background-color: var(--clr-accent);
+  z-index: -1;
+  bottom: 0;
+}
 .asb19__property--wrap {
   margin-top: 50px;
 }
 .asb19__property--box {
-  display: inline-block;
-  background-color: #e7e6ff;
-  padding: 15px 12px;
+  display: inline-flex;
+  background-color: #f5f5ff;
+  padding: 30px 12px;
   text-align: center;
+  aspect-ratio: 3/4;
+  flex-direction: column;
+  justify-content: space-between;
+  mask-image: url(https://raw.githubusercontent.com/agatha-sb/guruproperty/main/assets/images/property-type-mask.png);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  width: 175px;
+  height: 220px;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 60px;
+  background-color: #0000000f;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box:hover::before {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease-in-out;
 }
 .asb19__property--box-icon > * {
-  height: 70px;
+  height: 45px;
   object-fit: contain;
   margin: 0 auto;
 }
@@ -581,6 +642,11 @@ section[class^="asb19__"] {
   font-size: 16px;
   color: #242424;
   line-height: 24px;
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box:hover .asb19__property--box-title p {
+  color: var(--clr-white);
+  transition: all 0.5s ease-in-out;
 }
 .asb19__property--type {
   gap: 0 12px;
@@ -651,14 +717,40 @@ section[class^="asb19__"] {
   font-weight: 500;
   letter-spacing: 1.12px;
   display: inline-block;
-  display: inline-block;
 }
 .asb19__property--title a {
   display: inline-block;
   color: var(--clr-black);
 }
 .asb19__property--content {
-  margin-top: 12px;
+  background-color: var(--clr-white);
+  padding: 20px 25px;
+}
+.asb19__property--box-icon img  {
+  filter: unset;
+  transform: scaleX(1);
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box:hover .asb19__property--box-icon img {
+  filter: invert(100%) sepia(3%) saturate(19%) hue-rotate(60deg) brightness(103%) contrast(100%);
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(-1);
+}
+
+.asb19__property--box-img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box:hover .asb19__property--box-img {
+  opacity: 0.6;
+  transition: all 0.5s ease-in-out;
+}
+.asb19__property--box:hover {
+  background-color: #221f6c;
+  transition: all 0.5s ease-in-out;
 }
 /** ----------------------------
 *      Section: Property End
@@ -706,6 +798,39 @@ section[class^="asb19__"] {
   padding-top: 80px;
 }
 
+.asb19__form-widget .form-control {
+  padding: 13px 0px 13px 1px;
+  /*! height: 48px; */
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  font-weight: 400;
+  font-family: var(--ff-body);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(214, 214, 214);
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+}
+.asb19__form-widget .form-control::placeholder {
+  color: rgb(106, 110, 113);
+  /*! opacity: 1; */
+}
+.asb19__form-widget .form-control:hover {
+  border-color: var(--clr-accent);
+  transition: all 0.5s ease-in-out;
+}
+.asb19__form-widget .form-group {
+  margin-bottom: 32px;
+}
+.asb19__form-widget textarea.form-control {
+  min-height: 120px;
+  resize: none;
+}
+.asb19__git--wrap .asb19__heading {
+  width: 70%;
+}
+
 .asb19__contact--info ul li {
   display: flex;
   align-items: center;
@@ -715,6 +840,14 @@ section[class^="asb19__"] {
   height: 25px;
   width: 25px;
   object-fit: contain;
+}
+
+.asb19__contact--info ul li > * {
+  font-size: 18px;
+  color: var(--clr-black);
+}
+.asb19__contact--info ul li + li {
+  margin-top: 16px;
 }
 /** ----------------------------
 *      Section: Footer Start
