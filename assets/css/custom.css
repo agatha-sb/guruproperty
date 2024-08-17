@@ -467,6 +467,10 @@ section[class^="asb19__"] {
 .asb19__quick-nav--single > :not(:last-child) {
   margin-bottom: 8px;
 }
+.asb19__quick-nav--icon img {
+  height: 46px;
+  object-fit: contain;
+}
 
 .asb19__quick-nav--single {
   background-image: url('../images/pattern.png');
