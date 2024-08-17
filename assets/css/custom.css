@@ -16,6 +16,7 @@
 :root {
   --clr-accent: #221f6c;
   --clr-yellow: #fedb21;
+  
   --clr-yellow-shade: #e8c615;
   --clr-accent-tint: #e7e6ff;
   --clr-white: #ffffff;
@@ -1141,4 +1142,10 @@ align-items: center;
 }
 .asb19__bgMask img {
   width: 100%;
+}
+.asb19__agents--wrap {
+  padding-top: 40px;
+}
+[class^="swiper-button-"] {
+  visibility: hidden;
 }
