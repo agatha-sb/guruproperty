@@ -121,6 +121,13 @@ svg {
   position: relative;
   z-index: -1;
 }
+.asb19__bgMask {
+  mask-mode: alpha;
+-webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 section[class^="asb19__"] {
   position: relative;
   z-index: 3;
@@ -705,9 +712,15 @@ section[class^="asb19__"] {
 .asb19__property--feat-icon img {
   height: 25px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 .asb19__property--feat ul li p {
   font-size: 16px;
+  color: var(--clr-white);
+}
+
+.asb19__property--feat {
+  margin-top: 120px;
 }
 
 .asb19__property--price span {
@@ -723,8 +736,31 @@ section[class^="asb19__"] {
   color: var(--clr-black);
 }
 .asb19__property--content {
-  background-color: var(--clr-white);
-  padding: 20px 25px;
+  z-index: 2;
+  background: rgba(28, 45, 55, 0.7);
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
+  padding: 25px 50px;
+  position: absolute;
+  inset: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+.asb19__property--single {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 80px;
+}
+.asb19__property--btn {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+}
+.asb19__property--single:hover .asb19__property--content {
+  opacity: 1;
 }
 .asb19__property--box-icon img  {
   filter: unset;
@@ -752,6 +788,12 @@ section[class^="asb19__"] {
   background-color: #221f6c;
   transition: all 0.5s ease-in-out;
 }
+.asb19__property {
+  overflow: hidden;
+}
+.asb19__property--wrap {
+  margin-right: -200px;
+}
 /** ----------------------------
 *      Section: Property End
 **  --------------------------*/
@@ -759,10 +801,18 @@ section[class^="asb19__"] {
 *      Section: Agents Start
 **  --------------------------*/
 
-.asb19__agentCta--img img {
+/* .asb19__agentCta--img img {
   height: 370px;
   object-fit: contain;
   margin-left: auto;
+} */
+.asb19__agentCta--img img {
+  height: 400px;
+  object-fit: contain;
+  margin-right: auto;
+}
+.asb19__agentCta {
+  background-color: #f5f5ff;
 }
 /** ----------------------------
 *      Section: Agents End
@@ -849,6 +899,125 @@ section[class^="asb19__"] {
 .asb19__contact--info ul li + li {
   margin-top: 16px;
 }
+
+
+.asb19__agents--single {
+  position: relative;
+  overflow: hidden;
+}
+.team-card-content {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  top: 325px;
+  background: rgba(34, 31, 108, 0.767);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 0px;
+  padding: 18px 25px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  mask-image: url('https://raw.githubusercontent.com/agatha-sb/guruproperty/main/assets/images/team-shape1-2.png');
+  mask-size: 100% 100%;
+}
+.asb19__agents--single:hover .team-card-content {
+  top: 24px;
+    mask-image: url('https://raw.githubusercontent.com/agatha-sb/guruproperty/main/assets/images/team-shape1.png');
+  padding: 24px 25px;
+  transition: all 0.3s ease-in-out;
+}
+.media {
+  display: flex;
+justify-content: space-between;
+align-items: center;
+  margin-bottom: auto;
+  width: 100%;
+  text-align: start;
+}
+.media-left .title h3 {
+  font-size: 26px;
+  color: var(--clr-white);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.media-left .title {
+  display: block;
+}
+.team-desig.desig {
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  color: var(--clr-white);
+}
+.icon-btn {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--clr-yellow);
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.icon-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.th-social {
+  z-index: 1;
+  border-radius: 0;
+  transition: 0.4s;
+  margin-top: auto;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.asb19__agents--single:hover .th-social {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+.th-social li a {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+  color: var(--clr-white);
+  transition: all 0.3s ease-in-out;
+}
+.th-social li a:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  transition: all 0.3s ease-in-out;
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active  {
+  background-color: var(--clr-accent);
+}
+.swiper-pagination .swiper-pagination-bullet {
+  display: inline-block;
+  --swiper-pagination-bullet-size: 64px;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+  margin: 5px 7px;
+  height: 3px;
+  opacity: 1;
+  border-radius: 0;
+  background-color: var(--clr-accent-tint);
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
 /** ----------------------------
 *      Section: Footer Start
 **  --------------------------*/
@@ -932,3 +1101,44 @@ section[class^="asb19__"] {
 *      Section: Footer End
 **  --------------------------*/
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
+
+
+.img-shine {
+  position: relative;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+}
+.img-shine:hover::after {
+  -webkit-animation: imgShine 1s;
+  animation: imgShine 1s;
+}
+.img-shine::after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@-webkit-keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+.asb19__bgMask img {
+  width: 100%;
+}
