@@ -34,35 +34,54 @@ Fancybox.bind('[data-fancybox="gallery-3"]', {
 });
 
 
-var mensSquadSwiper = new Swiper(".kt-squad__kings-swiper", {
+var agentsSwiper = new Swiper(".asb19__agents--swiper", {
   autoPlay: false,
-  spaceBetween: "15px",
-  // grid: {
-  //   rows: 2,
-  //   fill: "row",
-  // },
+  spaceBetween: 24,
   autoplay: {
     delay: 3000,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next-agentsSW",
+    prevEl: ".swiper-button-prev-agentsSW",
   },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    hide: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
   breakpoints: {
     0: {
-      slidesPerView: 1
+      slidesPerView: 2
     },
     480: {
-      slidesPerView: 2.5
+      slidesPerView: 2
     },
     768: {
-      slidesPerView: 2.5
+      slidesPerView: 3
+    }
+  }
+});
+var propertySwiper = new Swiper(".asb19__property--swiper", {
+  autoPlay: false,
+  spaceBetween: 24,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-agentsSW",
+    prevEl: ".swiper-button-prev-agentsSW",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2
     },
-    1024: {
+    480: {
+      slidesPerView: 2
+    },
+    768: {
       slidesPerView: 2
     }
   }
