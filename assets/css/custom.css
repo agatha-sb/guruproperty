@@ -1072,7 +1072,7 @@ align-items: center;
 .asb19__footer--middle {
   /* margin-top: 20px; */
   border-top: 1px solid var(--clr-accent-tint);
-  padding: 25px 0 50px;
+  padding: 60px 0 50px;
 }
 .asb19__footer--title h5 {
   font-size: 25px;
@@ -1090,19 +1090,24 @@ align-items: center;
 }
 .asb19__footer--logo img {
   height: 45px;
+  object-fit: contain;
 }
 .asb19__footer--copy {
   color: var(--clr-white);
 }
 .asb19__footer--copy p {
   font-size: 15px;
-  text-align: end;
+  /* text-align: end; */
 }
 /** ----------------------------
 *      Section: Footer End
 **  --------------------------*/
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
-
+.asb19__footer--logo {
+  background-color: var(--clr-accent);
+  padding: 15px 24px;
+  width: fit-content;
+}
 
 .img-shine {
   position: relative;
