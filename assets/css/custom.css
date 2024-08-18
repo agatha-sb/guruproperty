@@ -92,7 +92,6 @@ svg {
   max-width: 100%;
   display: block;
 }
-
 /* Utility Classes */
 .overlay::before {
   position: absolute;
@@ -124,16 +123,18 @@ svg {
 }
 .asb19__bgMask {
   mask-mode: alpha;
--webkit-mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+.asb19__bgMask img {
+  width: 100%;
 }
 section[class^="asb19__"] {
   position: relative;
   z-index: 3;
 }
-
 /* Theme Classes */
 .bg-dark-gradient {
   background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.29) 100%);
@@ -228,9 +229,6 @@ section[class^="asb19__"] {
   font-weight: 500;
   color: var(--clr-yellow-shade);
 }
-/* .asb19__btn--link::before {
-  display: none;
-} */
 .asb19__btn--link:hover {
   background-color: transparent;
 }
@@ -254,21 +252,9 @@ section[class^="asb19__"] {
 .asb19__heading {
   position: relative;
 }
-/* .asb19__heading::before {
-  position: absolute;
-  content: '';
-  background-image: url('../images/titlelines.png');
-  left: 0;
-  top: 7px;
-  width: 10px;
-  height: 37px;
-  background-size: contain;
-  background-repeat: no-repeat;
-} */
 .asb19__heading h3 {
   font-size: 70px;
   font-weight: 500;
-  /* color: #1e1e1e; */
   line-height: 78px;
   letter-spacing: -2px;
   text-transform: capitalize;
@@ -289,26 +275,13 @@ section[class^="asb19__"] {
   color: var(--clr-yellow-shade);
   text-shadow: 0px 0px 30px rgba(119, 119, 119, 0.31);
 }
-/* .asb19__heading:has(h4) {
-  padding: 0;
-  margin-bottom: 0;
-}
-.asb19__heading:has(h4)::before {
-  display: none;
-}
-.asb19__heading h4 {
-  font-size: 30px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--clr-accent);
-  margin-bottom: 12px;
-} */
-/* .asb19__desc p {
-  font-weight: 300;
-  line-height: 26px;
-} */
 .asb19__desc > :not(:last-child) {
   margin-bottom: 16px;
+}
+
+/* Swiper Resets */
+[class^="swiper-button-"] {
+  visibility: hidden;
 }
 [class^="swiper-button-"]::after {
   content: '';
@@ -327,6 +300,44 @@ section[class^="asb19__"] {
 .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
   bottom: 0px;
 }
+
+/* Animations */
+.img-shine {
+  position: relative;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+}
+.img-shine:hover::after {
+  -webkit-animation: imgShine 1s;
+  animation: imgShine 1s;
+}
+.img-shine::after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+@-webkit-keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE START =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
 /** ----------------------------
 *      Section: Header Start
@@ -865,7 +876,9 @@ section[class^="asb19__"] {
   transition: all 0.3s ease-in-out;
 }
 
-
+/** ----------------------------
+*      Section: Git Start
+**  --------------------------*/
 .asb19__git {
   background-color: #f5f5ff;
 }
@@ -924,8 +937,13 @@ section[class^="asb19__"] {
 .asb19__contact--info ul li + li {
   margin-top: 16px;
 }
+/** ----------------------------
+*      Section: Git End
+**  --------------------------*/
 
-
+/** ----------------------------
+*      Section: Agents Start
+**  --------------------------*/
 .asb19__agents--single {
   position: relative;
   overflow: hidden;
@@ -1043,6 +1061,12 @@ align-items: center;
   transition: 0.4s;
   cursor: pointer;
 }
+.asb19__agents--wrap {
+  padding-top: 40px;
+}
+/** ----------------------------
+*      Section: Agents End
+**  --------------------------*/
 /** ----------------------------
 *      Section: Footer Start
 **  --------------------------*/
@@ -1050,7 +1074,6 @@ align-items: center;
   position: relative;
   z-index: 3;
 }
-
 .asb19__footer::before {
   position: absolute;
   content: "";
@@ -1123,58 +1146,12 @@ align-items: center;
   font-size: 15px;
   /* text-align: end; */
 }
-/** ----------------------------
-*      Section: Footer End
-**  --------------------------*/
-/** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
 .asb19__footer--logo {
   background-color: var(--clr-accent);
   padding: 15px 24px;
   width: fit-content;
 }
-
-.img-shine {
-  position: relative;
-  display: block;
-  z-index: 1;
-  overflow: hidden;
-}
-.img-shine:hover::after {
-  -webkit-animation: imgShine 1s;
-  animation: imgShine 1s;
-}
-.img-shine::after {
-  position: absolute;
-  top: 0;
-  left: -75%;
-  z-index: 2;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  -webkit-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  transform: skewX(-20deg);
-}
-
-@-webkit-keyframes imgShine {
-  100% {
-    left: 125%;
-  }
-}
-@keyframes imgShine {
-  100% {
-    left: 125%;
-  }
-}
-.asb19__bgMask img {
-  width: 100%;
-}
-.asb19__agents--wrap {
-  padding-top: 40px;
-}
-[class^="swiper-button-"] {
-  visibility: hidden;
-}
+/** ----------------------------
+*      Section: Footer End
+**  --------------------------*/
+/** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
