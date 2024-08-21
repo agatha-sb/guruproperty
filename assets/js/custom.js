@@ -86,6 +86,32 @@ var propertySwiper = new Swiper(".asb19__property--swiper", {
     }
   }
 });
+var testimonialSwiper = new Swiper(".asb19__testimonial--swiper", {
+  autoPlay: false,
+  spaceBetween: 50,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-agentsSW",
+    prevEl: ".swiper-button-prev-agentsSW",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2
+    },
+    480: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2
+    }
+  }
+});
 
 var womensSquadSwiper = new Swiper(".kt-squad__kueens-swiper", {
   autoPlay: false,

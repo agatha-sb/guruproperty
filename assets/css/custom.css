@@ -1107,6 +1107,43 @@ align-items: center;
 /** ----------------------------
 *      Section: Agents End
 **  --------------------------*/
+.asb19__testimonial--info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.asb19__testimonial--details h6 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.asb19__testimonial--details span {
+  margin-bottom: 0;
+  display: block;
+  color: #474747;
+  font-size: 16px;
+}
+.asb19__testimonial--client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.asb19__testimonial--review span {
+  display: inline-block;
+  color: var(--clr-yellow);
+}
+.asb19__testimonial--desc {
+  margin: 12px 0 20px;
+}
+.asb19__testimonial--wrap .swiper-wrapper {
+  padding-bottom: 50px;
+}
+.asb19__testimonial--wrap {
+  padding-top: 50px;
+}
+
 /** ----------------------------
 *      Section: Footer Start
 **  --------------------------*/
