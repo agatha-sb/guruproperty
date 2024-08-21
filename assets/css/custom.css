@@ -1232,3 +1232,18 @@ align-items: center;
 *      Section: Footer End
 **  --------------------------*/
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ HOMEPAGE END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
+
+.asb19__inner-banner .asb19__bgImg {
+  position: relative;
+}
+.asb19__inner-banner .asb19__bgImg.overlay::before {background-color: rgb(27, 27, 27);
+  opacity: 0.1;
+}
+.asb19__inner-banner--wrap {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
