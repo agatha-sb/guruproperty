@@ -512,7 +512,11 @@ section[class^="asb19__"] {
 }
 .asb19__quick-nav--title h5 {
   font-size: 25px;
-  line-height: 40px;
+  line-height: 32px;
+  height: 64px;
+}
+.asb19__quick-nav--desc p {
+  min-height: 160px;
 }
 /** ----------------------------
 *   Section: Quick Nav End
