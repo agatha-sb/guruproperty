@@ -992,7 +992,7 @@ section[class^="asb19__"] {
   position: relative;
   overflow: hidden;
 }
-.team-card-content {
+.asb19__agents--content {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -1009,7 +1009,7 @@ section[class^="asb19__"] {
   mask-image: url('https://raw.githubusercontent.com/agatha-sb/guruproperty/main/assets/images/team-shape1-2.png');
   mask-size: 100% 100%;
 }
-.asb19__agents--single:hover .team-card-content {
+.asb19__agents--single:hover .asb19__agents--content {
   top: 24px;
     mask-image: url('https://raw.githubusercontent.com/agatha-sb/guruproperty/main/assets/images/team-shape1.png');
   padding: 24px 25px;
@@ -1055,7 +1055,7 @@ align-items: center;
   height: 16px;
   object-fit: contain;
 }
-.th-social {
+.asb19__agents--social {
   z-index: 1;
   border-radius: 0;
   transition: 0.4s;
@@ -1066,12 +1066,12 @@ align-items: center;
   gap: 12px;
   transition: all 0.3s ease-in-out;
 }
-.asb19__agents--single:hover .th-social {
+.asb19__agents--single:hover .asb19__agents--social {
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease-in-out;
 }
-.th-social li a {
+.asb19__agents--social li a {
   display: inline-flex;
   width: 30px;
   height: 30px;
@@ -1083,7 +1083,7 @@ align-items: center;
   color: var(--clr-white);
   transition: all 0.3s ease-in-out;
 }
-.th-social li a:hover {
+.asb19__agents--social li a:hover {
   background-color: var(--clr-white);
   color: var(--clr-black);
   transition: all 0.3s ease-in-out;
@@ -1303,3 +1303,78 @@ display: flex;
   font-weight: 500;
 }
 .asb19__inner-banner .asb19__bgImg img {height: 450px;}
+
+
+
+.asb19__inner-contact--icon {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  background: #221f6c14;
+  border: 1px solid rgba(230, 230, 230, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.asb19__inner-contact--icon img {
+  height: 40px;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+.asb19__inner-contact--single {
+  background: var(--clr-accent-tint);
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  border: 1px solid #ECECEC;
+  padding: 24px 24px 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.asb19__inner-contact--details h6 {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--clr-accent);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__inner-contact--info > * {
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  color: var(--clr-black);
+}
+
+.asb19__inner-contact--single:hover {
+  background-color: var(--clr-accent);
+  border-color: #13113d;
+}
+.asb19__inner-contact--single:hover .asb19__inner-contact--icon img {
+  filter: invert(1);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__inner-contact--single:hover .asb19__inner-contact--details h6, .asb19__inner-contact--single:hover .asb19__inner-contact--info > * {
+  color: var(--clr-white);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.asb19__inner--form-left {
+  padding: 70px 40px;
+}
+.asb19__inner--form .asb19__form-widget {
+  background-color: var(--clr-white);
+  padding: 50px 45px 50px;
+}
+
+.asb19__map-widget {
+  height: 100%;
+}
+.asb19__map-widget iframe {
+  width: 100%;
+  height: 100%;
+}
+.form-group.form-button {
+  margin-bottom: 0;
+}
