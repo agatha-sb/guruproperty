@@ -1378,3 +1378,6 @@ display: flex;
 .form-group.form-button {
   margin-bottom: 0;
 }
+.asb19__inner--form.overlay::before {
+  z-index: -1;
+}
