@@ -1666,6 +1666,81 @@ align-items: center;
   object-fit: cover;
 }
 /* OUR PROCESS PAGE */
+/* SERVICES PAGE */
+.asb19__services--wrap {
+  margin-top: 50px;
+}
+.asb19__services--icon {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.asb19__services--icon img {
+  height: 40px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.asb19__services--single .asb19__services--icon img {
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__services--single:hover .asb19__services--icon {
+  background-color: var(--clr-accent-tint);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__services--single:hover .asb19__services--icon img {
+  transform: scaleX(-1);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__services--title {
+  margin: 17px 0 15px;
+  display: block;
+}
+.asb19__services--content h4 {
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 500;
+  color: var(--clr-black);
+}
+/* SERVICES PAGE */
+
+.about-3-thumb-list {
+  position: relative;
+}
+.about-3-thumb-list li:first-child {
+  position: absolute;
+  top: -240px;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.about-3-thumb-list li:first-child img {
+  width: 230px;
+  height: 200px;
+  object-fit: cover;
+}
+.about-3-thumb-list li:nth-child(2) {
+  position: absolute;
+  top: -240px;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.about-3-thumb-list li:nth-child(2) img {
+  width: 230px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
 .asb19__content > :not(:last-child) {
   margin-bottom: 15px;
 }
