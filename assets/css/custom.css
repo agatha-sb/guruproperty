@@ -1712,23 +1712,46 @@ align-items: center;
 
 .about-3-thumb-list {
   position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 0px;
+  position: relative;
+  margin-top: 95px;
+  text-align: center;
 }
-.about-3-thumb-list li:first-child {
+.gallery-card .popup-image {
+  border-radius: 32px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.gallery-card {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.asb19__content > :not(:last-child) {
+  margin-bottom: 15px;
+}
+.about-3-thumb-list li:nth-child(1) {
   position: absolute;
-  top: -240px;
+  top: -200px;
   left: 0;
   -webkit-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
   transform: translate(0, -100%);
 }
-.about-3-thumb-list li:first-child img {
+.about-3-thumb-list li:nth-child(1) img {
   width: 230px;
   height: 200px;
   object-fit: cover;
 }
 .about-3-thumb-list li:nth-child(2) {
   position: absolute;
-  top: -240px;
+  top: -200px;
   right: 0;
   -webkit-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
@@ -1739,8 +1762,58 @@ align-items: center;
   height: 200px;
   object-fit: cover;
 }
-
-
-.asb19__content > :not(:last-child) {
-  margin-bottom: 15px;
+.about-3-thumb-list li:nth-child(3) {
+  position: absolute;
+  top: -120px;
+  left: 0;
+}
+.about-3-thumb-list li:nth-child(3) img {
+  width: 405px;
+  height: 350px;
+  object-fit: cover;
+}
+.about-3-thumb-list li:nth-child(4) img {
+  width: 636px;
+  height: 350px;
+  object-fit: cover;
+}
+.about-3-thumb-list li:nth-child(5) {
+  position: absolute;
+  top: -120px;
+  right: 0;
+}
+.about-3-thumb-list li:nth-child(5) img {
+  width: 405px;
+  height: 350px;
+  object-fit: cover;
+}
+@keyframes jump {
+	0% {
+		transform: translatey(0%);
+	}
+	50% {
+		transform: translatey(-10%);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes jump-reverse {
+	0% {
+		transform: translatey(0%);
+	}
+	50% {
+		transform: translatey(10%);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.jump {
+	-webkit-animation: jump 7s linear infinite;
+	animation: jump 7s linear infinite;
+}
+.jump-reverse {
+	-webkit-animation: jump-reverse 7s linear infinite;
+	animation: jump-reverse 7s linear infinite;
 }
