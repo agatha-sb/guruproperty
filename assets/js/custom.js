@@ -5,11 +5,11 @@
 // ************************************************* //
 
 $(window).on('scroll', function() {
-  if($(this).scrollTop() > 250 ) {
-    $(".kt-page__header").addClass("fixed__header");
+  if($(this).scrollTop() > 800 ) {
+    $(".asb19__header").addClass("fixed__header");
     $(".header-top").slideUp();
   } else {
-    $(".kt-page__header").removeClass("fixed__header");
+    $(".asb19__header").removeClass("fixed__header");
     $(".header-top").slideDown();
   }
 });
