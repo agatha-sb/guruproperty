@@ -14,19 +14,7 @@ $(window).on('scroll', function() {
   }
 });
 
-Fancybox.bind('[data-fancybox="gallery-1"]', {
-  caption: function (fancybox, slide) {
-    const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
-    return figurecaption ? figurecaption.innerHTML : slide.caption || "";
-  },
-});
-Fancybox.bind('[data-fancybox="gallery-2"]', {
-  caption: function (fancybox, slide) {
-    const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
-    return figurecaption ? figurecaption.innerHTML : slide.caption || "";
-  },
-});
-Fancybox.bind('[data-fancybox="gallery-3"]', {
+Fancybox.bind('[data-fancybox="rp-gallery"]', {
   caption: function (fancybox, slide) {
     const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
     return figurecaption ? figurecaption.innerHTML : slide.caption || "";
@@ -109,65 +97,6 @@ var testimonialSwiper = new Swiper(".asb19__testimonial--swiper", {
     },
     768: {
       slidesPerView: 2
-    }
-  }
-});
-
-var womensSquadSwiper = new Swiper(".kt-squad__kueens-swiper", {
-  autoPlay: false,
-  spaceBetween: "15px",
-  loop: true,
-  // grid: {
-  //   rows: 2,
-  //   fill: "row",
-  // },
-  autoplay: {
-    delay: 3000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    hide: false,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 2.5
-    },
-    768: {
-      slidesPerView: 2.5
-    },
-    1024: {
-      slidesPerView: 2
-    }
-  }
-});
-var fixturesSwiper = new Swiper(".kt-fixtures__matches-swiper", {
-  direction: "vertical",
-  autoplay: {
-    delay: 3000,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 2
-    },
-    768: {
-      slidesPerView: 2
-    },
-    1024: {
-      slidesPerView: 3
     }
   }
 });
