@@ -267,6 +267,23 @@ section[class^="asb19__"] {
   width: 100%;
   padding: 14px 39px;
 }
+.icon-btn {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--clr-yellow);
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.icon-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
 .asb19__main--widget > :not(:last-child) {
   margin-bottom: 20px;
 }
@@ -295,6 +312,11 @@ section[class^="asb19__"] {
   letter-spacing: 1.12px;
   color: var(--clr-yellow-shade);
   text-shadow: 0px 0px 30px rgba(119, 119, 119, 0.31);
+}
+.asb19__content--widget h5 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 44px;
 }
 .asb19__desc > :not(:last-child) {
   margin-bottom: 16px;
@@ -511,6 +533,7 @@ animation: menu-sticky 1s ease-in-out;
 .asb19__header:hover .asb19__header--nav .nav-link, .asb19__header.fixed__header .asb19__header--nav .nav-link {
   --bs-nav-link-color: var(--clr-black);
 }
+
 /** ----------------------------
 *      Section: Header End
 **  --------------------------*/
@@ -631,11 +654,6 @@ animation: menu-sticky 1s ease-in-out;
 .asb19__quick-nav--content {
   margin-top: 50px;
 }
-.asb19__content--widget h5 {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 44px;
-}
 .asb19__quick-nav--single > :not(:last-child) {
   margin-bottom: 8px;
 }
@@ -741,9 +759,9 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *      Section: Suburb Start
 **  --------------------------*/
-.asb19__suburb {
+/* .asb19__suburb {
   background-color: var(--clr-accent-tint);
-}
+} */
 .asb19__suburb--wrap {
   margin-top: 34px;
 }
@@ -1068,7 +1086,7 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *      Section: Git Start
 **  --------------------------*/
-.asb19__form-widget .form-control, .asb19__form-widget .form-select {
+.asb19__form--widget .form-control, .asb19__form--widget .form-select {
   padding: 13px 15px 13px 15px;
   font-size: 16px;
   line-height: 21px;
@@ -1080,38 +1098,38 @@ animation: menu-sticky 1s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 6px;
 }
-.asb19__form-widget .form-control + .form-icon, .asb19__form-widget .form-select + .form-icon {
+.asb19__form--widget .form-control + .form-icon, .asb19__form--widget .form-select + .form-icon {
   position: absolute;
   right: 15px;
   top: 14px;
   font-size: 14px;
   z-index: 0;
 }
-.asb19__form-widget .form-control::placeholder {
+.asb19__form--widget .form-control::placeholder {
   color: rgb(106, 110, 113);
 }
-.asb19__form-widget .form-control:hover {
+.asb19__form--widget .form-control:hover {
   border-color: var(--clr-accent);
   transition: all 0.5s ease-in-out;
 }
-.asb19__form-widget .form-group {
+.asb19__form--widget .form-group {
   margin-bottom: 20px;
   position: relative;
 }
-.asb19__form-widget textarea.form-control {
+.asb19__form--widget textarea.form-control {
   min-height: 120px;
   resize: none;
 }
-.asb19__form-widget .form-group.form-button {
+.asb19__form--widget .form-group.form-button {
   margin-bottom: 0;
 }
-.asb19__form-widget .form-button.asb19__btn {
+.asb19__form--widget .form-button.asb19__btn {
   padding: 0;
   background-color: var(--clr-accent);
   border-color: var(--clr-accent);
   color: var(--clr-white) !important;
 }
-.asb19__form-widget .asb19__heading {
+.asb19__form--widget .asb19__heading {
   margin-bottom: 25px;
 }
 .asb19__git--wrap .asb19__heading {
@@ -1199,23 +1217,6 @@ animation: menu-sticky 1s ease-in-out;
   font-weight: 400;
   display: block;
   color: var(--clr-white);
-}
-.icon-btn {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background-color: var(--clr-yellow);
-  text-align: center;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.icon-btn img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
 }
 .asb19__agents--social {
   z-index: 1;
@@ -1540,7 +1541,7 @@ animation: menu-sticky 1s ease-in-out;
 .asb19__inner--form-left {
   padding: 70px 40px;
 }
-.asb19__inner--form .asb19__form-widget {
+.asb19__inner--form .asb19__form--widget {
   background-color: var(--clr-white);
   padding: 50px 45px 50px;
   border-radius: 16px;
@@ -1549,7 +1550,6 @@ animation: menu-sticky 1s ease-in-out;
   z-index: -1;
   opacity: 0.3;
 }
-
 /** ----------------------------
 *  Section: Contact Form End
 **  --------------------------*/
@@ -2021,3 +2021,76 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *   Section: Purchases End
 **  --------------------------*/
+/** ----------------------------
+* Section: Property Inner Start
+**  --------------------------*/
+.asb19__hero-search .asb19__form--widget {
+  background-color: var(--clr-accent-tint);
+  padding: 0 0 0 40px;
+  border-radius: 10px;
+}
+.asb19__hero-search .asb19__form--widget .form-control, .asb19__hero-search .asb19__form--widget .form-select {
+  padding: 0;
+  border: none;
+  font-size: 18px;
+  color: var(--clr-black);
+}
+.asb19__hero-search .asb19__form--widget .form-group {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.asb19__hero-search .asb19__form--widget .form-icon {
+  top: unset;
+  font-size: 14px;
+  position: unset;
+  left: unset;
+  padding-right: 16px;
+}
+.asb19__hero-search .asb19__form--widget .form-control::placeholder {
+  color: var(--clr-black);
+}
+.asb19__hero-search .asb19__form--widget .form-button.asb19__btn {
+  border-radius: 10px;
+}
+.asb19__hero-search .asb19__form--widget .asb19__btn--submit {
+  padding: 30px 19px;
+}
+.asb19__hero-search .asb19__form--widget [class^="col"] {
+  border-left: 1px solid #221f6c0f;
+}
+.asb19__hero-search .asb19__form--widget [class^="col"]:nth-child(1), .asb19__hero-search .asb19__form--widget [class^="col"]:last-child {
+  border: none;
+}
+.asb19__hero--v2 .asb19__hero--heading {
+  margin: 0 auto 20px;
+  width: 70%;
+}
+.asb19__hero--v2 .asb19__hero--icon svg {
+  margin: 0 auto;
+}
+.asb19__property--v2 .asb19__property--content {
+  background-color: var(--clr-white);
+  padding: 20px 25px;
+  position: relative;
+  inset: unset;
+  opacity: 1;
+}
+.asb19__property--v2 .asb19__property--feat {
+  margin-top: 15px;
+}
+.asb19__property--v2 .asb19__property--feat-icon img {
+  filter: unset;
+}
+.asb19__property--v2 .asb19__property--feat ul li p {
+  color: var(--clr-accent);
+}
+.asb19__property--v2 {
+  margin: 50px 0 0 0;
+}
+/** ----------------------------
+*   Section: Property Inner End
+**  --------------------------*/
+

@@ -21,6 +21,12 @@ Fancybox.bind('[data-fancybox="rp-gallery"]', {
   },
 });
 
+$(document).ready(function(){
+  if ($(window).width() > 991) {
+    $(".asb19__header .nav-link.dropdown-toggle").removeAttr("data-bs-toggle");
+  }
+})
+
 
 var agentsSwiper = new Swiper(".asb19__agents--swiper", {
   autoPlay: false,
